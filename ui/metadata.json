@@ -1,0 +1,6 @@
+{
+  "name": "Loan Origination System",
+  "description": "A Jira-inspired enterprise Loan Origination Tracking and Workflow Management Platform with Role-Based access, dynamic board navigation, and bank-grade credit underwriting checklists.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
