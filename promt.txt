@@ -1,0 +1,506 @@
+PROMPT 1
+ 
+# Build a Jira-Inspired Loan Origination System (LOS) Frontend
+
+Create a modern enterprise-grade Loan Origination System (LOS) frontend application using:
+
+* Frontend Framework: Thymeleaf-based UI templates
+* Design Style: Jira-inspired workflow management platform
+* Theme: Premium Banking UI with Red (#C8102E), White, and Light Gray color palette
+* Layout: Responsive Web Application
+* UI Style: Clean, enterprise, professional banking software
+* Icons: Lucide Icons
+* Components: Cards, Modals, Rich Text Editors, Task Panels, Activity Timelines
+* Drag & Drop: Full Kanban functionality similar to Jira
+
+---
+
+## Core Product Vision
+
+Build a Loan Origination Platform where loan applications move through multiple workflow stages .
+
+The experience should feel like:
+
+* Jira
+* Monday.com
+* Azure DevOps Boards
+* Salesforce Pipeline Management
+
+combined with banking loan workflow requirements.
+
+---
+
+# Dashboard Layout
+
+Top Navigation:
+
+* Company Logo
+* Search Applications
+* Notifications
+* User Profile
+* Role Switcher
+
+Left Sidebar:
+
+* Dashboard
+* Loan Applications
+* Tasks
+* My Work Queue
+* Reports
+* Customers
+* Settings
+
+Main Area:
+
+* Kanban Board
+
+---
+
+# Business Segment Selection
+
+Before creating an application, Relationship Manager (RM) must select:
+
+### Business Segment
+
+Dropdown:
+
+* Agri Finance
+* Consumer Banking
+* SME Banking
+
+Each application card should display:
+
+* Application ID
+* Customer Name
+* Business Segment
+* Loan Amount
+* RM Name
+* Priority
+* Current Status
+* SLA Timer
+
+---
+
+# Kanban Board Stages
+
+Create 6 columns:
+
+1. Lead Initiation
+2. Customer Onboarding
+3. Underwriting
+4. Credit Approval
+5. Documentation & Disbursement
+6. Complete
+
+Cards must be draggable between columns.
+
+Use smooth drag-and-drop animations similar to Jira.
+
+---
+
+# Stage 1: Lead Initiation
+
+When RM clicks "Create Application", open a modal.
+
+Capture:
+
+### Application Details
+
+* Loan Amount
+* Product Type
+* Business Segment
+* Purpose of Loan
+
+### Borrower Details
+
+* Full Name
+* Email
+* Mobile Number
+
+### Co-Borrower Details
+
+Allow dynamic addition of multiple co-borrowers.
+
+Fields:
+
+* Full Name
+* Email
+* Mobile Number
+
+### Meeting Information
+
+Minutes of Meeting Section
+
+Use Rich Text Editor with:
+
+* Bold
+* Italic
+* Bullet Points
+* Attachments
+* Mentions
+
+Save activity to timeline.
+
+After submission:
+
+Application card appears in Lead Initiation.
+
+---
+
+# Application Details Screen
+
+Clicking a card should open a Jira-style Application Workspace.
+
+Layout:
+
+## Left Panel
+
+Application Information
+
+* Customer Details
+* Loan Information
+* Borrowers
+* Co-Borrowers
+
+## Center Panel
+
+Tasks
+
+## Right Panel
+
+Activity Timeline
+
+Shows:
+
+* Stage changes
+* Comments
+* Assignments
+* Document uploads
+
+---
+
+# Stage 2: Customer Onboarding
+
+When application moves into Customer Onboarding:
+
+System automatically creates onboarding tasks.
+
+Default Tasks:
+
+### Document Collection
+
+* PAN
+* Aadhaar
+* Income Proof
+* Bank Statements
+* Address Proof
+* Business Registration Documents
+
+Each task contains:
+
+* Status
+* Assignee
+* Due Date
+* Attachments
+* Comments
+
+Task States:
+
+* To Do
+* In Progress
+* Completed
+
+All onboarding tasks must be completed before moving further.
+
+Display progress bar:
+
+8/8 Documents Collected
+
+100% Complete
+
+---
+
+# Stage 3: Underwriting
+
+When application enters Underwriting:
+
+Automatically create credit tasks.
+
+Default Tasks:
+
+1. Hygiene Check
+2. Field Visit
+3. Financial Analysis
+4. CRAN Generation
+5. Terms & Conditions Preparation
+
+---
+
+## Credit Task Workspace
+
+Every task should open a detailed page.
+
+Include:
+
+### Rich Text Credit Assessment Editor
+
+Features:
+
+* Formatting toolbar
+* Tables
+* Bullet points
+* Checklists
+* File attachments
+* Image uploads
+
+Credit team records findings here.
+
+---
+
+## Credit Team Capabilities
+
+Credit users can:
+
+* Create New Task
+* Assign Task
+* Reassign Task
+* Request Additional Documents
+* Send Task back to RM
+
+Example:
+
+Task:
+"Collect latest GST Returns"
+
+Assigned To:
+Relationship Manager
+
+Status:
+Pending
+
+---
+
+# Task Dependency Engine
+
+Application cannot move to Credit Approval unless:
+
+All credit tasks are completed.
+
+Show warning:
+
+"3 Underwriting Tasks Pending"
+
+---
+
+# Stage 4: Credit Approval
+
+Credit Approver View
+
+Display:
+
+### Credit Summary Card
+
+* Financial Analysis Summary
+* Risk Grade
+* Recommended Limit
+* Proposed Terms
+
+### Approval Actions
+
+Buttons:
+
+* Approve
+* Reject
+* Send Back to Credit Team
+
+Approval comments required.
+
+---
+
+# Stage 5: Documentation & Disbursement
+
+Once approved:
+
+Automatically generate operational tasks.
+
+Dynamic tasks should be created based on approved credit assessment.
+
+Examples:
+
+### Documentation Tasks
+
+* Loan Agreement Signing
+* Stamp Duty Verification
+* Security Creation
+* KYC Verification
+
+### Deferred Document Tasks
+
+Dynamic list generated from credit recommendation.
+
+### Exception Management
+
+* Exception Approval
+* Waiver Documentation
+
+### Disbursement Tasks
+
+* Account Verification
+* Disbursement Processing
+* Customer Confirmation
+
+Each task includes:
+
+* Assignee
+* Due Date
+* Rich Text Notes
+* Attachments
+
+---
+
+# Limit Management Integration
+
+When all Documentation & Disbursement tasks are completed:
+
+System automatically:
+
+* Marks application as Completed
+* Creates customer limit record
+
+Display:
+
+Customer Limit Established Successfully
+
+with green success indicator.
+
+---
+
+# Application Card Design
+
+Each Kanban card should display:
+
+* Application ID
+* Customer Name
+* Loan Amount
+* RM Name
+* Segment Badge
+* Priority Badge
+* SLA Indicator
+* Task Completion %
+
+Use premium banking design.
+
+---
+
+# Role-Based Views
+
+## Relationship Manager
+
+Can:
+
+* Create applications
+* Add customers
+* Upload documents
+* Complete assigned tasks
+
+## Credit Analyst
+
+Can:
+
+* Review applications
+* Complete underwriting tasks
+* Create additional tasks
+* Send tasks back to RM
+
+## Credit Manager
+
+Can:
+
+* Approve
+* Reject
+* Request Rework
+
+## Operations Team
+
+Can:
+
+* Complete documentation tasks
+* Execute disbursement
+
+## Admin
+
+Can:
+
+* Manage users
+* Configure workflow
+* Create task templates
+
+---
+
+# Reporting Dashboard
+
+Include widgets:
+
+* Applications by Stage
+* Average TAT
+* Approval Rate
+* Disbursement Volume
+* Pending Tasks
+* SLA Breaches
+
+Use charts and KPI cards.
+
+---
+
+# UI/UX Requirements
+
+Theme:
+
+* Banking Red
+* White
+* Light Gray
+
+Design Style:
+
+* Premium Enterprise SaaS
+* Jira-Inspired
+* Modern Banking Product
+
+Features:
+
+* Drag & Drop Kanban
+* Rich Text Editors
+* Activity Timeline
+* Notifications
+* Task Assignment
+* Progress Tracking
+* Responsive Design
+* Smooth Animations
+
+
+
+The final output should look like a production-ready Loan Origination System used by large banks and NBFCs, combining Jira-style task management with banking loan workflow automation.
+
+
+
+
+------------------------------------------------------------------------
+PRomt 2 : 
+currently when we click on ticket it opens a drawer. update this design so that drawer includes complete page and supports back button
+-------------------------------------------------------------------------
+PRompt 3 :
+When we click on the ticket screen where we display different task as per the stage update the design to list the task in left panel.
+each task should be displayed with the name whom it is assigned along with the status
+main task details should be open in central part of window.
+task should have a option to assign it to a person
+task details screen should have an option to upload a file and it should have a option to add a comment.
+below the task details it should have histry of the actions does on this task. all of the previous comment along with the link to uploaded file
+
+
+
+--------------------------------------------------------------------------
+PROMPT 4 :
+In each task view add a field with Rich Text Notes for comments. we dont need saperate comment and need a save button which user can use after assignment , comment and status change
+
+
+ 
